@@ -70,7 +70,7 @@ export default class App extends React.Component {
     return (
       <div>
         <div className='SearchBlk'>
-          <input type='checkbox' onClick={this.onChecked} className='folterInput' ></input>
+          <input type='checkbox' onClick={this.onChecked} className='filterInput' ></input>
           <SearchBlock
             onSearch={this.onSearch}
             search={this.search}

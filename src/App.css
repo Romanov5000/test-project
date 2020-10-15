@@ -6,7 +6,7 @@ body{
     padding-bottom: 2rem;
     border-bottom: 1px solid gray;
 }
-.folterInput{
+.filterInput{
     transform: scale(1.5);
     opacity: 0.9;
     cursor: pointer;

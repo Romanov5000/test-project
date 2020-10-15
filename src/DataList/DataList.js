@@ -1,26 +1,23 @@
 import React from 'react';
 
+const DataList = ({ todos }) => {
 
-const DataList = (props) => {
-    const { todos } = props;
     if (!todos.length) {
-        const dataElement = <p>No results found</p>;
-        return dataElement
+        return <p>No results found</p>
     }
-
-    const dataElement = todos.map((item) => {
-        return (
-            <li className={'list-group-item'}>
-                {item}
-            </li>
-
-        )
-    });
 
     return (
         <ul className="list-group dataElements">
-            {dataElement}
+            {todos.map((item) => {
+                return (
+                    <li className={'list-group-item'}>
+                        {item}
+                    </li>
+
+                )
+            })}
         </ul>
     )
-}
+};
+
 export default DataList;
