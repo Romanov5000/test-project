@@ -1,27 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './SearchBlock.css';
 
-export default class SearchBlock extends React.Component {
+const SearchBlock = (props) => {
 
+    const [searchValue, setSearchValue] = useState('');
 
-    onTextChange = () => {
-        this.props.onSearch(this.searchInput.value)
+    const onTextChange = () => {
+        props.onSearch(searchValue)
     }
 
-    onFilter = () => {
-        
-        this.props.filter(this.searchInput.value)
+    const onFilter = () => {
+
+        props.filter(searchValue)
     }
 
-    render() {
-        
-        return (
-            <div className="SearchBlock" >
 
-                <input ref={(input) => { this.searchInput = input }}></input>
-                <button onClick={this.onTextChange.bind(this)}>dddd</button>
-                <button onClick={this.onFilter.bind(this)}>vvv</button>
-                
-            </div>
-        );
-    }
+    return (
+        <div className="SearchBlock" >
+
+            <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className="form-control"></input>
+            <button onClick={onTextChange} className="btn btn-info">Search</button>
+            <button onClick={onFilter} className="btn btn-info">Length</button>
+
+        </div>
+    )
 }
+export default SearchBlock;

@@ -1,0 +1,15 @@
+.SearchBlock{
+    width: 98%;
+    display: flex;
+}
+.SearchBlock input{
+
+    margin-right: 5rem;
+}
+.btn{
+    margin-right: 0.2rem;
+}
+.btn:focus{
+    outline: -webkit-focus-ring-color auto 0px;
+    box-shadow: none;
+}
